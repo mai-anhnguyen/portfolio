@@ -203,12 +203,19 @@ th {
     font-weight: bolder;
     margin-left: 4rem;
 
-    /* display: flex;  */
-    /* justify-content: space-between;  */
-    /* align-items: center; */
-    /* padding-top: 10rem; */
-    /* padding-bottom: 10rem; */
-    /* gap: 2rem; */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    gap: 2rem;
+}
+
+.ascii {
+    border-color: white;
+    box-shadow: none;
+    width: 70%;
+    height: 70%;
 }
 
 #projects {
