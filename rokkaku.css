@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem; 
+}
+
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#navbar.sticky {
+    background-color: rgba(26, 26, 26, 0.9);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-logo {
+    width: auto;
+    height: 70px;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger-menu .bar {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.hamburger-menu .bar:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-menu .bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-menu .bar:nth-child(3) {
+    bottom: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 1rem;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #ce3024;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.hero {
+    background-image: url("assets/lunch_img_02.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1a1a1a;
+    font-family: 'DM Sans', Arial, sans-serif;
+    border-bottom: 3px solid #ce3024;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #1a1a1a;
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: bold;
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.section {
+    padding: 4rem 2rem;
+}
+
+.menu-category {
+    margin-bottom: 2rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.menu-price {
+    font-size: 1.1rem;
+    color: #ce3024;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.menu-description {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+#information {
+    position: relative;
+}
+
+.information-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-section {
+    width: 100%;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-button,
+.reservation-button {
+    background-color: #ce3024;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover,
+.reservation-button:hover {
+    background-color: #b0261c;
+}
+
+
+.menu-gallery {
+    margin-top: 2rem;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides:first-child {
+  display: block;
+}
+
+.w3-content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.w3-left, .w3-right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.w3-right {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.w3-left {
+  left: 0;
+}
+
+.w3-left:hover, .w3-right:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) { 
+    .w3-left, .w3-right {
+        font-size: 1rem; 
+        padding: 8px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        transition: left 0.3s ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .restaurant-logo {
+        height: 40px; 
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem; 
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem; 
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 0.9rem; 
+    }
+
+    .menu-item {
+        padding: 1rem;
+    }
+
+    .menu-price {
+        font-size: 1rem; 
+    }
+
+    .menu-description {
+        font-size: 0.9rem; 
+    }
+}
+
+
+@media (min-width: 576px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .nav-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        padding: 0;
+    }
+
+    .nav-menu li {
+        margin-left: 1rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .information-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    .contact-button,
+    .reservation-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .map-section {
+        order: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .information-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-buttons {
+        flex-direction: row;
+        align-items: center;
+        order: 2;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+
+    .contact-button,
+    .reservation-button {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .map-section {
+        order: 1;
+    }
+}
+
+#about-us,
+#menu,
+#information,
+#blog {
+    padding-top: 4rem;
+    scroll-margin-top: 100px;
+}
+
+
+/* Style for the sticky circle */
+.sticky-circle {
+    position: fixed; /* Fixed position, stays in place when scrolling */
+    bottom: 25px; /* Distance from the bottom of the screen */
+    right: 30px;  /* Distance from the right side of the screen */
+    width: 100px;  /* Width of the circle */
+    height: 100px;  /* Height of the circle */
+    background-color: rgb(38, 49, 197);  
+    color: white;  /* White text color */
+    font-size: 14px;  /* Font size */
+    display: flex;  /* Flexbox for centering text */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    border-radius: 50%;  /* Makes it circular */
+    text-align: center;  /* Center the text inside */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+    z-index: 1000;  /* Ensure it stays on top */
+    cursor: pointer;  /* Change cursor to pointer */
+    transition: transform 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.sticky-circle:hover {
+    transform: scale(1.1);  /* Slightly scale the circle when hovered */
+}
+
+/* Style for the link inside the circle */
+.sticky-circle a {
+    color: white;  /* White text color */
+    text-decoration: none;  /* Remove underline */
+    font-weight: bold;  /* Bold text */
+    text-align: center;  /* Center text */
+}

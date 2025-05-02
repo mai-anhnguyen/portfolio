@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Components</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter+Tight"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><a href="index.html">Mai-Anh Nguyen</a></h1>
+      </div>
+      <nav class="top-nav">
+        <a href="#projects">Work</a>
+        <a href="film.html">Films</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+    
+    <nav class="left-column">
+      <h1><a href="#top">Accessible Components</a></h1>
+      <a href="#introduction">Introduction</a>
+      <a href="#input">Input</a>
+      <a href="#output">Output</a>
+      <a href="#state-models">State Models</a>
+      <a href="#component-redesign">Component Redesign</a>
+      <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <main class="right-column">
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          This study explores the accessibility and usability of dropdown menus
+          across various applications. I examine the input methods, output
+          responses, and overall user experience for both mouse and keyboard
+          users. By analyzing and revising state models, I propose a possible
+          redesign.
+        </p>
+      </section>
+
+      <section id="input">
+        <h2>Input</h2>
+        <p>
+          Dropdown menu components are implemented in TextEdit (a simple macOS
+          text editor), GitHub Desktop, and Target.com. Below are slideshows
+          showing how dropdown menus appear in various applications in various
+          states.
+        </p>
+        <h3>3 Applications:</h3>
+
+        <article>
+          <h4>1. TextEdit</h4>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="800"
+            height="450"
+            src="https://embed.figma.com/slides/Vss86V2exPkB8ynQKwwP5k/TextEdit?node-id=1-553&embed-host=share"
+            allowfullscreen
+          ></iframe>
+        </article>
+
+        <article>
+          <h4>2. GitHub Desktop</h4>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="800"
+            height="450"
+            src="https://embed.figma.com/slides/ev7zQAfxVLilFEusXNzLMo/Untitled?node-id=1-553&embed-host=share"
+            allowfullscreen
+          ></iframe>
+        </article>
+
+        <article>
+          <h4>3. Target.com</h4>
+
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="800"
+            height="450"
+            src="https://embed.figma.com/slides/3X86HOZCpdhpdsssuoVzKD/Target?node-id=1-1184&embed-host=share"
+            allowfullscreen
+          ></iframe>
+        </article>
+        <p>
+          The table below records the input process of interacting with the
+          dropdown menu in each of the three applications.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>GitHub Desktop</th>
+              <th>Target.com</th>
+              <th>TextEdit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Mouse/Touchpad</th>
+              <td>
+                <ul>
+                  <li>Hovering over the dropdown box causes it to focus.</li>
+                  <li>
+                    Clicking this region opens up the dropdown select list of
+                    options.
+                  </li>
+                  <li>
+                    To close the dropdown, click the dropdown region again or
+                    click anywhere outside the dropdown menu.
+                  </li>
+                  <li>No effect when the mouse is dragged.</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    When the cursor hovers over the dropdown region, the field
+                    is focused.
+                  </li>
+                  <li>Clicking the region expands the dropdown menu.</li>
+                  <li>
+                    The region can be clicked once more to condense/close the
+                    dropdown.
+                  </li>
+                  <li>
+                    Alternatively, clicking anywhere outside the dropdown menu
+                    closes it.
+                  </li>
+                  <li>No effect when the mouse is dragged.</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    The component is focused when the mouse hovers over the
+                    region.
+                  </li>
+                  <li>When the dropdown label is clicked, it expands.</li>
+                  <li>
+                    You can click anywhere within the box; it is not necessary
+                    to precisely click the arrows.
+                  </li>
+                  <li>No effect when the mouse is dragged.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Keyboard</th>
+              <td>
+                <ul>
+                  <li>
+                    The options in the dropdown select can be navigated with the
+                    Tab key.
+                  </li>
+                  <li>Shift + Tab goes back to the previous component.</li>
+                  <li>
+                    Pressing the Return key or the spacebar activates the
+                    component.
+                  </li>
+                  <li>The Esc key is used to close the dropdown.</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Tab is used to advance through the different components on
+                    the page.
+                  </li>
+                  <li>Shift + Tab goes back to the previous component.</li>
+                  <li>Pressing the Return key activates the component.</li>
+                  <li>The Esc key is used to close the dropdown.</li>
+                  <li>
+                    The spacebar scrolls the page down and cannot be used to
+                    activate a component.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>The app lacks efficient keyboard controls.</li>
+                  <li>
+                    Unable to navigate the header with the dropdowns with Tab
+                    presses.
+                  </li>
+                  <li>
+                    Since the app is a simple text editor, pressing Tab simply
+                    tabs the paragraph in the text box.
+                  </li>
+                  <li>
+                    The up and down arrows only have an effect once the dropdown
+                    select is clicked open with the mouse.
+                  </li>
+                  <li>
+                    The Esc key is used to close the dropdown if it has been
+                    opened with a mouse click.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="output">
+        <h2>Output</h2>
+        <p>
+          Dropdown menus in the different applications output feedback to the
+          user. Outputs represent the state. Most commonly in dropdowns, there
+          is a color change associated with a change in hover or focus.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>GitHub Desktop</th>
+              <th>Target.com</th>
+              <th>TextEdit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Mouse/Touchpad</th>
+              <td>
+                <ul>
+                  <li>
+                    Hovering over the dropdown box causes it to change color to
+                    a lighter background shade.
+                  </li>
+                  <li>
+                    The dropdown has a down arrow on the right side when in
+                    default state; when the dropdown is expanded, the arrow
+                    switches to point up.
+                  </li>
+                  <li>
+                    The dropdown changes from black to a white background color
+                    when expanded.
+                  </li>
+                  <li>
+                    When hovering the options in the selection, the background
+                    color turns gray.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    When the cursor hovers over the dropdown region, the
+                    background turns gray.
+                  </li>
+                  <li>
+                    A down arrow appears to the right of the text, indicating
+                    the dropdown can be clicked to open content vertically down.
+                  </li>
+                  <li>
+                    When the dropdown is expanded, the arrow switches and points
+                    upwards.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Hovering on the dropdown causes it to turn a darker shade of
+                    gray.
+                  </li>
+                  <li>The color change is delayed slightly.</li>
+                  <li>
+                    When hovering over the options in the dropdown, the hovered
+                    option’s background color changes to blue and the text turns
+                    white.
+                  </li>
+                  <li>
+                    The selected option has a checkmark to the left of the text.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Keyboard (Focus Order)</th>
+              <td>
+                <ul>
+                  <li>
+                    The selected component (selected using the Tab key) is
+                    communicated by outlining the component in blue and white.
+                  </li>
+                  <li>
+                    Pressing Tab to select an option in the expanded dropdown’s
+                    list will turn the background blue and the text white.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Pressing Tab will first prompt “skip to main content,” then
+                    “skip to footer,” and then the focus will move through the
+                    components from left to right; up to down.
+                  </li>
+                  <li>
+                    The components selected are denoted with a dashed line
+                    around the region.
+                  </li>
+                  <li>
+                    The selected option in the expanded dropdown’s list is
+                    underlined.
+                  </li>
+                  <li>
+                    Once the user Tabs to the end of the list, a “Close” button
+                    appears, which, when pressed, closes the dropdown and moves
+                    the focus to the next component.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>The app lacks efficient keyboard controls.</li>
+                  <li>
+                    Unable to navigate the header with the dropdowns using Tab
+                    presses.
+                  </li>
+                  <li>
+                    Since the app is a simple text editor, pressing Tab simply
+                    tabs the paragraph in the text box.
+                  </li>
+                  <li>
+                    The up and down arrows only have an effect once the dropdown
+                    select is clicked open with the mouse.
+                  </li>
+                  <li>
+                    The Esc key is used to close the dropdown if it has been
+                    opened with a mouse click.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Screen Reader</th>
+              <td>
+                <ul>
+                  <li>
+                    The screen reader recites the text label of the dropdown -
+                    “Current Branch main, collapsed, button, group.”
+                  </li>
+                  <li>
+                    Followed by “You are currently on a button, inside of a
+                    collection. To click this button, press
+                    Control-Option-Space. To exit this group, press
+                    Control-Option-Shift-Up Arrow.”
+                  </li>
+                  <li>
+                    When the user opens the dropdown, the text of each option is
+                    read aloud.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    When the focus is on, for instance, the “Pickup & delivery”
+                    dropdown, the screen reader states - “collapsed, link,
+                    pickup and delivery.”
+                  </li>
+                  <li>
+                    Followed by “You are currently on a link, inside of web
+                    content. To click this link, press Control-Option-Space. To
+                    exit this web area, press Control-Option-Shift-Up Arrow.”
+                  </li>
+                  <li>
+                    The screen reader recites the selection list such as “link,
+                    Shop Same Day Delivery” and “Close, button.”
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    The screen reader reads the dropdown with “menu, 6 items,
+                    Regular.”
+                  </li>
+                  <li>
+                    The list of options is read aloud when navigated with the up
+                    and down keys.
+                  </li>
+                  <li>
+                    TextEdit does not work well with the screen reader; keyboard
+                    controls like Control-Option-Space have no effect on the
+                    app.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="state-models">
+        <h2>State Models</h2>
+        <p>
+          The state models visualize how a user may interact with the dropdown
+          component as it currently exists on the application or website. The
+          state models represent both mouse users and keyboard users. The models
+          illustrate the varying states of the dropdown component, including
+          default, focused, hovered, and active.
+        </p>
+        <p>Dropdown component: mouse user</p>
+        <img
+          src="./assets/1.png"
+          alt="State model for mouse user"
+          class="state-model"
+        />
+        <p>Dropdown component: keyboard user</p>
+        <img
+          src="./assets/2.png"
+          alt="State model for keyboard user"
+          class="state-model"
+        />
+        <p>
+          The following two state models revise the dropdown component such that
+          when the user hovers or focuses on the component, the dropdown
+          automatically expands.
+        </p>
+        <p>Revised dropdown component: mouse user</p>
+        <img
+          src="./assets/3.png"
+          alt="Revised state model for mouse user"
+          class="state-model"
+        />
+        <p>Revised dropdown component: keyboard user</p>
+        <img
+          src="./assets/4.png"
+          alt="Revised state model for keyboard user"
+          class="state-model"
+        />
+      </section>
+
+      <section id="component-redesign">
+        <h2>Component Redesign</h2>
+        <p style="padding-bottom: 20px">
+          The dropdown component has been revised with the mouse user in mind.
+          The revised state model reflects how the dropdown will activate when
+          the user’s mouse hovers over the dropdown label. Previously, the user
+          had to click the label to expand the dropdown. This increases
+          efficiency for the mouse user. There is a new risk of decreased
+          efficiency if the user is not used to the hover function and
+          accidentally opens the dropdowns. The revised dropdown can increase
+          learnability for both mouse and keyboard users since they can see the
+          available options without additional clicks or presses.
+        </p>
+        <iframe
+          style="border: 1px solid rgba(0, 0, 0, 0.1)"
+          width="800"
+          height="450"
+          src="https://embed.figma.com/design/SGLlVV7Mj89xCZyHeNFMlV/Untitled?node-id=0-1&embed-host=share"
+          allowfullscreen
+        ></iframe>
+        <p>
+          However, the trade off is that for keyboard users, this change could
+          make navigating the page less efficient. If the dropdown opens
+          automatically on hover, with keyboard navigation, the keyboard user
+          may have to press Tab through all the options in the dropdown menu in
+          order to get to a different component on the page. If the user hovers
+          over a specific option on the dropdown, there will be a visual output
+          of bold text. This indicates which option the user is hovering over or
+          selecting.
+        </p>
+      </section>
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          In conclusion, dropdowns that did well in usability and accessibility
+          were compatible with keyboard navigation. Users can navigate the list
+          of options of the dropdown using the Tab or Shift + Tab key.
+          Additionally, feedback was visually given to the user. When the mouse
+          user hovers or the keyboard user focuses on the dropdown it changes
+          color. To open the dropdown, the user must click the dropdown label.
+          The component aligns with users’ mental model of a dropdown, as the
+          selection list dropped vertically from the dropdown label. I applied
+          these principles in my design by outputting feedback with visual
+          changes. For instance, when hovering over an option in the list, the
+          text turns to bold face. In my component design, I accounted for the
+          learnability of users. Now, when the mouse user hovers over the
+          dropdown, it expands automatically without needing an extra click. For
+          the keyboard user, when the Tab key is pressed to reach the dropdown
+          component, it expands automatically. Similar to the examples in the
+          video, addressing a mismatch ends up being helpful for all users in
+          general. The design’s original purpose is to help with learnability,
+          but ends up potentially increasing the efficiency of navigating the
+          page for all users.
+        </p>
+        <p>
+          TextEdit on macOS had keyboard navigation that was extremely limited.
+          Tab and Shift + Tab keys did not affect the selection of any
+          components. The dropdowns could not be accessed solely with keyboard
+          navigation. This negatively impacts users with motor impairments and
+          rely on functionality through the keyboard solely. The screen reader
+          provided ample output to the user on Target.com. It would recite the
+          text label of the dropdown and also specify to the user if the
+          dropdown is collapsed. This positively impacts users with visual
+          impairments who are blind or have low vision and rely on screen
+          readers. In the process of creating components, I think that mouse
+          users are most commonly prioritized. This could potentially mean that
+          the interface is not as clear for mobile/touch users if the design is
+          not responsive. Also, as the TextEdit example shows, keyboard users
+          could be negatively impacted if the product is not built with them in
+          mind and only works effectively with a mouse.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

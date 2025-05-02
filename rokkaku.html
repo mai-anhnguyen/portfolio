@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Components</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter+Tight"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><a href="index.html">Mai-Anh Nguyen</a></h1>
+      </div>
+      <nav class="top-nav">
+        <a href="#projects">Work</a>
+        <a href="film.html">Films</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <nav class="left-column">
+      <h1><a href="#top">Rokkaku Kitchen</a></h1>
+      <a href="#introduction">Introduction</a>
+      <a href="#input">Usability Problems</a>
+      <a href="#output">Style Guide</a>
+      <a href="#state-models">Mockup</a>
+      <a href="#component-redesign">Redesign</a>
+      <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <main class="right-column">
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          Rokkaku Kitchen 109 is a restaurant based in Kyoto, Japan. I visited
+          this restaurant and was drawn to their fresh food and inviting menu.
+          However, I feel that their current website does not properly reflect
+          the professionalism and quality of their work. There are some
+          usabliity problems and as such, I have developed a redesign of their
+          homepage. I first bagan by observing the current website and noting
+          specific usability problems. I then created a style guide and mockups
+          of a new design. Finally, I coded a site in HTML, CSS, and JavaScript
+          in order to bring my designs to life. This page outlines the process I
+          took to redesign the website and the final redesigned homepage can be
+          found at <a href="https://mai-anhnguyen.github.io/csci1300-responsive-redesign/">https://mai-anhnguyen.github.io/csci1300-responsive-redesign/</a>.
+        </p>
+      </section>
+
+      <section id="input">
+        <h2>Usability Problems</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Efficiency</strong></td>
+              <td>
+                <ul>
+                  <li>
+                    The navigation bar is not sticky, so to go to a different
+                    section, there is a small arrow that will take you all the
+                    way up the page and then clicking the section goes all the
+                    way back down.
+                  </li>
+                  <li>
+                    One of the options in the navigation bar links to a separate
+                    page, but this is not communicated to the user, so users may
+                    get frustrated when having to close the new tab to get back
+                    to the main page.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Learnability</strong></td>
+              <td>
+                <ul>
+                  <li>
+                    When the webpage is first opened, there is a lot of text
+                    that is not ordered in a clear way.
+                  </li>
+                  <li>
+                    There is not a strong sense of hierarchy through font size
+                    and color choices.
+                  </li>
+                  <li>
+                    Could make use of simple icons such as a phone icon for
+                    increased learnability.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Memorability</strong></td>
+              <td>
+                <ul>
+                  <li>
+                    The site uses a consistent color palette of black, red, and
+                    white.
+                  </li>
+                  <li>
+                    A user can come back and understand that they need to scroll
+                    on the website to see information, which is reported to the
+                    user through a scroll.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Additionally, I ran the homepage through WebAIM WAVE. I agree with the
+          problems that WebAIM WAVE detected. It found that there were low
+          contrast errors, which I agree with. It also detected images without
+          alternative text and small text. There is a link to a PDF on the
+          webpage which WAVE flagged as well, since PDF documents often have
+          accessibility issues themselves.
+        </p>
+      </section>
+
+      <section id="output">
+        <h2>Style Guide</h2>
+        <p>
+          I then created a style guide to guide my design choices. The guide displays the main colors, typography, and reusable components present on the homepage. Once I began coding the homepage, there were some minor changes, such as the font family, but the general palette and overall style remains the same. 
+        </p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/lDi7emSgjRUhBFgaVwkwbY/Style-Guide?node-id=1-2&embed-host=share" allowfullscreen></iframe>
+      </section>
+
+      <section id="state-models">
+        <h2>Mockups</h2>
+        <p>In Figma, I created mockups for three different types of screens: phone, tablet, and computer. I drafted the placement of the elements on the interface and ensured that across all three screens, there was a consistent style with components being reused, rather than three completely different screens.</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/tAoFB5pEzjf2WQYRMwF0xo/Mockups?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+        <p>Additionally, I annotated my mockups with notes relevant to a developer that needs to reproduce my designs</p>
+        <img src="Screenshot 2025-03-31 at 5.57.48 PM.png"/>
+        <img src="Screenshot 2025-03-31 at 5.58.21 PM.png"/>
+        <img src="Screenshot 2025-03-31 at 5.58.44 PM.png"/>
+
+        <p>I presented this work to my peers for critique. After the critique, I heard a number of opinions and changed my interfaces accordingly. The changes can be observed by comparing my mockups to my final webpage.</p>
+      </section>
+
+      <section id="component-redesign">
+        <h2>Redesign</h2>
+        <p>After gathering opinions and ideas from my peers during critique, I built the webpage with HTML, CSS, and JavaScript. See the website at <a href="https://mai-anhnguyen.github.io/csci1300-responsive-redesign/">https://mai-anhnguyen.github.io/csci1300-responsive-redesign/</a></p>
+      </section>
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          In conclusion, the redesigned homepage solves usabliity problems present in the original website. For instance, by keeping the navigation bar sticky, users can easily navigate to different sections of the page without having to scroll all the way back up. Additionally, the use of a consistent color palette and font choices creates a more professional and polished look. The website is now more accessible and user-friendly, making it easier for users to find the information they need!
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

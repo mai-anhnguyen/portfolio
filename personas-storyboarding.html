@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Components</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter+Tight"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><a href="index.html">Mai-Anh Nguyen</a></h1>
+      </div>
+      <nav class="top-nav">
+        <a href="#projects">Work</a>
+        <a href="film.html">Films</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <div class="content-wrapper">
+      <nav class="left-column">
+        <h1><a href="#top">Personas and Storyboarding</a></h1>
+        <a href="#introduction">Introduction</a>
+        <a href="#input">Observations</a>
+        <a href="#output">Interviews</a>
+        <a href="#state-models">Personas</a>
+        <a href="#component-redesign">Storyboard</a>
+        <a href="#conclusion">Conclusion</a>
+      </nav>
+
+      <main class="right-column">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>
+            In order to practice crafting personas and building storyboards, I investigated the usability of a microwave found in my dorm's communal kitchen. I observed three different users
+            interacting with the microwave. I also interviewed the users to gain
+            insight into their experiences. Ultimately, I aim to identify the
+            challenges users face when using the microwave and visualize their expriences through personas and storyboards.
+          </p>
+        </section>
+
+        <section id="input">
+          <h2>Observations</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Person 1</th>
+                <th>Person 2</th>
+                <th>Person 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Heating up a mug of water</li>
+                    <li>Clicks the button labeled "Start" — Nothing happens</li>
+                    <li>Clicks the "Express" button</li>
+                    <li>Stops the microwave when there is 29 seconds left</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Heating up a pastry</li>
+                    <li>Turns the knob — Nothing changes on the screen</li>
+                    <li>Clicks "Time Cook"</li>
+                    <li>Turns the knob and sets a cook time of 20 seconds</li>
+                    <li>Opens the microwave after 10 seconds</li>
+                    <li>Feels the temperature of the pastry</li>
+                    <li>Puts the muffin back in and presses "Start"</li>
+                    <li>
+                      Waits until the microwave beeps and retrieves the pastry
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Cooking a frozen meal</li>
+                    <li>Spends time looking at the different options</li>
+                    <li>Slower to choose an option than others</li>
+                    <li>Clicks the button labeled "Cook"</li>
+                    <li>Seems unsatisfied with the result</li>
+                    <li>Clicks the button labeled "Time Cook"</li>
+                    <li>Turns the dial to set the time labeled on the box</li>
+                    <li>Presses start and walks away</li>
+                    <li>Hears the microwave beep and takes out the meal</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="output">
+          <h2>Interview Questions</h2>
+          <p>
+            After observing the behavior of the user, I then asked them a series
+            of questions. The questions are listed below.
+          </p>
+          <blockquote style="background-color: rgba(184, 222, 239, 0.098); border-left: 5px solid #25bff2;">
+          <ol>
+            <li>Can you describe your experience using a microwave?</li>
+            <li>How often do you use this microwave?</li>
+            <li>What do you typically use it for?</li>
+            <li>Are there any challenges?</li>
+            <li>
+              What is intuitive about the experience using this microwave?
+            </li>
+            <li>How do you resolve challenges when using a microwave?</li>
+            <li>What components signify how to use a microwave?</li>
+            <li>How user-friendly and effective is the microwave?</li>
+            <li>
+              What aspects of using a microwave are most frustrating or
+              confusing for you?
+            </li>
+            <li>
+              Have you ever faced technical difficulties while using the
+              microwave? How did you handle them?
+            </li>
+            <li>Are there any features you wish the microwave had?</li>
+            <li>
+              What suggestions do you have for improving the experience of using
+              the microwave overall?
+            </li>
+          </ol>
+          </blockquote>
+          <p>
+            In summary, the microwave is located in a public, communal kitchen
+            in a dormitory. The users interviewed are all college students
+            residing in the building. The users had mixed feelings about the
+            microwave. One user expressed that the microwave’s interface did not
+            feel intuitive as a first-time user, especially compared to previous
+            microwaves they had used before. They had pressed “Start” and
+            expected the microwave to start for at least a minute, but instead
+            nothing happened. When asked about how they resolve challenges, they
+            all responded that if one button did not perform the expected
+            action, they would press another. One user stated that the opening
+            and closing of the microwave was intuitive, but setting time and
+            power was less so. There was no mention of looking up information
+            online or in a manual, which emphasizes one user’s point that they
+            wished everything they needed to know was listed on the microwave,
+            instead of having to guess.
+          </p>
+        </section>
+
+        <section id="state-models">
+          <h2>Personas</h2>
+          <h4>
+            <em>Persona 1: Jean is a busy college student who wants to quickly heat
+            up goods. She does not know where to start when it comes to starting
+            the microwave for 30 seconds. Jean represents users that are used to
+            other interfaces.</em>
+          </h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Thinks</th>
+                <th>Feels</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>I just need to heat this up quickly</li>
+                    <li>Where’s the 1 minute button?</li>
+                    <li>
+                      Which button should I press to start the microwave for
+                      just 30 seconds?
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Confused that the Start button does not do anything</li>
+                    <li>
+                      Frustrated that there are no numbers to choose from and
+                      the lack of a simple way to set 30 seconds
+                    </li>
+                    <li>
+                      Annoyed by the different dials and knobs on the microwave
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Says</th>
+                <th>Does</th>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li>
+                      It still shows the time of day. Why did nothing happen?
+                    </li>
+                    <li>Why are there so many buttons?</li>
+                    <li>Do you know how to use this?</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      Presses the Start button before setting a specific time
+                    </li>
+                    <li>Presses the Express button afterwards</li>
+                    <li>
+                      Waits 30 seconds before opening the microwave and
+                      retrieving her mug
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>
+            <em>Persona 2: Helen is a college student who regularly uses the
+            microwave to reheat leftovers or cook frozen meals. She sometimes
+            gets confused when trying to set a specific power level. She
+            represents users that are familiar with the microwave but struggle
+            with specific details.</em>
+          </h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Thinks</th>
+                <th>Feels</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>The box says to cook for 3 minutes on high</li>
+                    <li>How do I change the power level?</li>
+                    <li>Is it Options? Or Power?</li>
+                    <li>What does Combination mean?</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Confident in setting the cook time for 3 minutes</li>
+                    <li>Confused about how to change the power level</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Says</th>
+                <th>Does</th>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Do you know how to change this setting?</li>
+                    <li>How do I know if it worked?</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Presses Options first</li>
+                    <li>Presses the Power button afterwards</li>
+                    <li>
+                      Turns the dial to the right to set a 3 minute cook time
+                    </li>
+                    <li>Takes out the meal when the microwave beeps</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="component-redesign">
+          <h2>Storyboard</h2>
+          <p>The following storyboard chronicles the journey of Persona 1.</p>
+          <img src="assets/storyboard.png" />
+        </section>
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+          <p>
+            In conclusion, the microwave's interface is not intuitive for all
+            users. The microwave has a number of different buttons and dials
+            that can be confusing for first-time users. The lack of clear
+            instructions on the microwave itself can lead to frustration and
+            confusion. Additionally, there lacks an ordering to the different
+            options, which can also be confusing to users. Users instead have to
+            rely on trial and error to figure out how to use the microwave
+            appropriately. Ultimately, this was a useful practice in building personas and storyboards to
+            help visualize the challenges users face when using the
+            microwave. These findings can be used to understand the needs and
+            frustrations of users.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

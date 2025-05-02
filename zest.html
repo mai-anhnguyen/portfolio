@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mai-Anh Nguyen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Inter+Tight" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><a href="index.html">Mai-Anh Nguyen</a></h1>
+      </div>
+      <nav class="top-nav">
+        <a href="#projects">Work</a>
+        <a href="film.html">Films</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+    
+    <div class="content-wrapper">
+      <nav class="left-column">
+        <h2><a href="#top">Designing for Zest</a></h2>
+        <a href="#introduction">Introduction</a>
+        <a href="#input">The Problem Statement</a>
+        <a href="#output">Step 1: Initial Concepting</a>
+        <a href="#state-models">Step 2: Combining Our Ideas</a>
+        <a href="#component-redesign">Step 3: Initial Feedback</a>
+        <a href="#hifi-prototype">Step 4: Hi-Fi Prototype</a>
+        <a href="#final-feedback">Final Feedback</a>
+        <a href="#conclusion">Conclusion</a>
+      </nav>
+
+    <main class="right-column">
+      <div id="top"></div>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          All design is iterative. Whether working within a group, for a customer, making a web interface, or a rocket engine, success necessitates openness to change and diverse perspectives. 
+          
+          As part of Brown University's CSCI 1300: Interaction Design course, I worked with three classmates to design for Zest, a corporate gifting platform. Our task was to design a new interface for large-scale uploads of recipient information. From developing initial concepts within our group to showcasing our final mockup feature, we leveraged multiple opportunities for feedback and revision to create a more robust and polished feature. Here was our iterative process. 
+        </p>
+      </section>
+
+      <section id="input">
+        <h2>The Problem Statement</h2>
+        <p>
+          We communicated directly with Christine Pun, Zest's lead UI Designer to establish a solid understanding of Zest's current problem. </p>
+          <blockquote>
+            Zest's current interface for CSV uploading was too restrictive, frustrating customers and limiting businesses' ability to customize their interface. We were tasked with creating an interface that could accommodate a diverse set of inputs while streamlining the whole process for the customer. 
+          </blockquote>
+      </section>
+
+      <section id="output">
+        <h2>Step 1: Initial Concepting</h2>
+        <p>Once we had a clear idea of the problem we were trying to solve, each member of our team sketched out a series of screens representing four unique implementations of the feature. None of us communicated during this process, and we didn't look at Zest's current interface. The purpose of this step was to generate fresh ideas.</p>
+        <h3>Concept #1:</h3>
+        <div class="row">
+          <div class="column">
+            <img src="assets/ci1i.jpg" alt="1/2 images of concept #1">
+          </div>
+          <div class="column">
+            <img src="assets/unnamed.jpg" alt="2/2 images of concept #2">
+          </div>
+        </div>
+        
+        <p>The first set of sketches represent four main steps. First, the user selects how they would like to enter the recipient info. After following the instructions to upload a CSV (should they choose that option), they are taken to a page which informs them of all required fields. If they choose to continue, a loading screen updates them on the status of their upload.</p>
+        <blockquote>
+          <p>Key Features:</p>
+          <ul>
+            <li>Presents the user with alternatives to CSV upload</li>
+            <li>Option to download CSV template</li>
+            <li>Provides clear instructions to the user at each step of the process</li>
+            <li>Clear distinction between required and optional fields</li>
+            <li>Visual updates keep the user engaged during down-time</li>
+          </ul>
+        </blockquote>
+
+        <h3>Concept #2:</h3>
+        <div class="row">
+          <div class="column">
+            <img src="assets/c2i1.png" alt="1/2 images of concept #2">
+          </div>
+          <div class="column">
+            <img src="assets/c2i2.png" alt="2/2 images of concept #2">
+          </div>
+        </div>
+        <p>In the second set of sketches, three main steps comprise the feature: </p>
+          <ol>
+            <li>First, the user may choose to upload a CSV or add recipients manually.</li>
+            <li>After uploading a CSV, they see the field mappings and can fix any errors that appear.</li>
+            <li>Finally they see a finalized recipients list after submitting.</li>
+          </ol>
+        <blockquote>
+          <p>Key Features:</p>
+          <ul>
+            <li>Presents the user with alternatives to CSV upload</li>
+            <li>Option to download CSV template</li>
+            <li>Original CSV rendered in-window</li>
+            <li>Visualization of mapping from user-supplied columns to required fields (First & Last → Full Name)</li>
+            <li>Errors displayed on the side; counter for number of errors remaining</li>
+            <li>User must fix all errors before continuing</li>
+          </ul>
+        </blockquote>
+        <h3> Concept #3: </h3>
+        <img src="assets/c3.jpg" alt="image of concept 3">
+        <p>The third set of sketches follows a similar process as the second: </p>
+        <ol>
+          <li>The first screen provides users with an area to upload their CSV.</li>
+          <li>The second presents errors and an interface for interpreting and resolving them.</li>
+          <li>Finally, they can see their original CSV displayed with no errors before submitting.</li>
+        </ol>
+        <blockquote>
+          <p>Key Features:</p>
+          <ul>
+            <li>Progress bar at the top to keep user informed</li>
+            <li>Field checklist for CSV upload visible before uploading</li>
+            <li>Highlights on errors in rendered CSV</li>
+            <li>Option to only show rows with errors</li>
+            <li>Dropdown-based visualization of content mapping</li>
+            <li>Visual representation of unused columns ("unselect columns")</li>
+          </ul>
+      </blockquote>
+        <h3> Concept #4: </h3>
+        <div class="row">
+          <div class="column">
+            <img src="assets/c4i1.jpg" alt="image of concept #4">
+          </div>
+
+          <div class="column">
+            <img src="assets/c4i2.jpg" alt="image of concept #4">
+          </div>
+        </div>
+        <p>The fourth set of sketches also follows a similar set of steps: </p> 
+        <ol>
+          <li>On the first screen, the user uploads their CSV.</li>
+          <li>Next, they are taken to a page which renders their original CSV with errors displayed.</li>
+          <li>The user can click on the CSV to open a new page with an enlarged and editable rendering of their CSV, where they can fix errors.</li>
+        </ol>
+        <blockquote>
+          <p>Key Features:</p>
+          <ul>
+            <li>Large field for uploading CSV</li>
+            <li>Loading icon to track upload progress</li>
+            <li>Errors displayed to the side of rendered CSV</li>
+            <li>Error cells in CSV highlighted red</li>
+            <li>Clicking on CSV opens new window for editing</li>
+          </ul>
+        </blockquote>
+      </section>
+
+      <section id="state-models">
+        <h2>Step 2: Combining Our Ideas</h2>
+        <p>Once all four of us had come up with unique implementations of the feature, it was time to combine them into one unified wireframe. The purpose of this step was to take the best ideas from each of our concepts and build a prototype using them. Using four independently-created concepts allowed us to identify which features we had converged on, while also prompting us to investigate areas where our implementations differed. The result (shown below) was a prototype where each feature had been weighed against alternatives—a much more robust first draft than any one of us could have created alone.</p>
+        
+        <h3 style="text-align: center;">The Wireframe</h3>
+        <img src="assets/zest_wireframe.png" alt="Zest Magic Spreadsheet Wireframe"> 
+        <br>
+
+        <blockquote>In our finalized wireframe prototype, made using Balsamiq, the feature is broken up into three main screens. The first displays information about required fields and prompts the user to upload their CSV in the upload field. Once uploaded, the CSV is rendered in-window along with a visual representation of the field mappings and warnings about any major (column-wide) errors detected. This allows major errors to be fixed, and incorrect field mappings to be corrected, before moving on to finer-grained error handling. The final screen allows users to fix cell-specific errors before submitting their finalized list.</blockquote>
+
+        <p>The wireframe combines features from all four of our initial concepts. Here are the features we kept from each:</p>
+
+        <h3>Concept #1: </h3>
+        <ul>
+          <li>List of required fields (helps reduce trial and error, clarifies the process without being restrictive)</li>
+          <li>Large window for CSV uploading (showcases CSV functionality and makes it easy to drag files in)</li>
+        </ul>
+
+        <h3>Concept #2: </h3>
+        <ul>
+          <li>CSV fully rendered in-window so user can see field mappings on their original import </li>
+          <li>Error messages displayed to the side of each row (gives users explicit direction for fixing errors) </li>
+          <li>Cells in rendered CSV are editable (reduces need to reupload, a major pain-point in the original) </li>
+        </ul>
+
+        <h3>Concept #3: </h3>
+        <ul>
+          <li>Top progress bar (keeps users informed/confident throughout the process)</li>
+          <li>Red highlights on errors for enhanced visual communication</li>
+          <li>Option to only view error rows (improves useability and accessibility by reducing visual clutter)</li>
+          <li>Dropdowns for changing field mappings (gives users flexibility without necessitating complexity)</li>
+        </ul>
+
+        <h3>Concept #4: </h3>
+        <ul>
+          <li> Separate pages for viewing uploaded CSV and editing errors (clear flow reduces cognitive load)</li>
+        </ul>
+
+        <h3>New features:</h3>
+        <ol>
+          <li>Forward/backward navigation buttons at the bottom of each page </li>
+          <li>Error fixing page collates user fields into required fields (clearer representation of what's required)</li>
+          <li>Vertical and horizontal scrolling on spreadsheet displays</li>
+        </ol>
+      </section>
+
+      <section id="component-redesign">
+        <h2>Step 3: Initial Feedback</h2>
+        <p>After completing our wireframe, we received feedback on it from a Teaching Assistant for our class. Below are some of the main points of feedback we received.</p>
+        <ul>
+          <li>Page titles (in concert with progress bar) could help clarify the purpose of each page</li>
+          <li>Adding a "reupload" button to the rendered-CSV page would eliminate redundant clicks</li>
+          <li>Moving error messages from the side to a popup in each cell would make the UI more informative and fix formatting issues with multiple errors on one row</li>
+          <li>Add back button to error-editing page for consistency</li>
+          <li>Progress bar looked a too interactive/button like</li>
+          <li>Add clarification to each item in the "required fields" list for more specificity</li>
+        </ul>
+        <p>Having a novice user look over our prototype webpage was invaluable for discovering where our feature was unclear or lacking functionality. It gave us a clear direction for the next phase of our work: creating a more polished mockup of our feature. </p>
+      </section>
+
+      <section id="hifi-prototype">
+       <h2>Step 4: High-Fi Prototype</h2>
+        <p>We developed our final prototype using Figma, which allowed us to model the interactions we expected users to perform. The combination of feedback and enhanced modeling enabled us to anticipate the pros and cons of each choice more accurately. Our final prototype closely resembles our original wireframe, incorporating several minor changes that enhance its functionality, usability, and accessibility.</p>
+
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/WKDN65oRu2n56YpNzpMHAu/Zest-Hi-Fi-Prototype?page-id=0%3A1&node-id=6-3&starting-point-node-id=6%3A3&embed-host=share" allowfullscreen></iframe>
+
+        <p>Below are some key changes we made between our original wireframe and our polished prototype.</p>
+
+        <ul>
+          <li>Included hoverable information icons next to each item in the "required fields" list (this will explicitly state the required columns for the user)</li>
+          <li>Modernized our color scheme for the website using Zest's colors (the color scheme will be adapted to fit other company's scheme)</li>
+          <li>Moving the error messages to be within each erroneous cell of our CSV (this allows the user to target erroneous cells correctly and with ease )</li>
+          <li>Made the styling and messages of navigation buttons consistent across each page (this will clear some confusion as the user navigates from page to page)</li>
+          <li>Made our progress bar look less like a button and more like a timeline (this will allow the user to understand where they are in the workflow without confusion)</li>
+          <li>Added a confirmation and celebration page to our workflow (this will guide the user through the last steps of uploading their CSV)</li>
+        </ul>
+      </section>
+      <section id="final-feedback">
+        <h2>Final Feedback</h2>
+        <p>Once we had completed our hi-fi prototype, we sent it to Zest for a final round of retrospective feedback. Below are some of the key comments and takeaways from our meeting and the overall process.</p>
+        
+        <h3>Feedback from Christine</h3>
+        <blockquote style="background-color: rgba(224, 184, 239, 0.098); border-left: 5px solid #9925f2;">
+        <ol>
+          <li>Christine appreciated the features we included to make our interface easier to use. These included the toggle for error row visibility, the progress bar at the top, the editable cells in our rendered CSVs, and the information popups we included.</li>
+          <li>Christine felt that our interface could benefit from giving more explicit feedback to users throughout the process. For example, on the mapping page, we could have included more explicit messages about what users could do to edit the mappings or correct significant errors. </li>
+          <li>There were some quality-of-life features that would have benefited our interface. Having error rows float to the top automatically, adding an option to save progress or download an in-progress CSV, and adding options to import other spreadsheet formats would have made the overall user experience smoother and more flexible. </li>
+        </ol>
+        </blockquote>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>Throughout working on this design for Zest, we have gone through numerous rounds of feedback and redesigning certain aspects of our CSV uploading and mapping features. Here are some key lessons learned throughout our workflow:</p>
+        
+        <h3>Lessons Learned</h3>
+        <ol>
+          <li>One strength was our streamlined interface that balanced simplicity with necessary guidance. With more time, we could have enhanced this with additional popup information and conditional feedback.</li>
+          <li>While we received visual feedback, actual user testing would have been invaluable. Our limited resources reinforced the importance of all design stages—this initial mockup provides the foundation for future user testing.</li>
+          <li>The project highlighted how various tools serve different development phases. Using Balsamiq for wireframing, Figma for detailed modeling, and Loom for sharing demonstrated how selecting appropriate tools for each stage improves efficiency and results.</li>
+        </ol>
+      </section>
+    </main>
+    </div>
+  </body>
+</html>
