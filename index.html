@@ -5,37 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mai-Anh Nguyen</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Inter+Tight" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter+Tight"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/fc5b17df3817479c9f6279992843d637?family=Nelio+Round+Script+OT+W03+Rg"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <h1><a href="index.html">Mai-Anh Nguyen</a></h1>
+      <div class="nav-container">
+        <nav class="top-nav">
+          <a href="#projects"><span>WORK</span></a>
+          <a href="film.html"><span>FILMS</span></a>
+          <a href="about.html"><span>ABOUT</span></a>
+        </nav>
       </div>
-      <nav class="top-nav">
-        <a href="#projects">Work</a>
-        <a href="film.html">Films</a>
-        <a href="about.html">About</a>
-      </nav>
     </header>
 
     <main>
-      <section id="intro" style="padding-top: 10rem; padding-bottom: 10rem; display: flex; justify-content: space-between; align-items: center; padding-top: 10rem; padding-bottom: 10rem; gap: 2rem;">
+      <section id="intro">
         <div class="text-container">
-            <h1 style="font-size: xxx-large; font-weight: 900;">Mai-Anh Nguyen</h1>
-            <p>Designing sleek, user-centered systems.<br>Studying Computer Science-Economics &<br> Modern Culture and Media at Brown University.<br>Previously at The Estée Lauder Companies and Intel.</p>
+          <h1 class="name">Ma<span style="letter-spacing: 9px;">i</span>-Anh Nguyen</h1>
+          <!-- <p class="description">
+            Designing sleek, user-centered systems.<br />Studying Computer
+            Science-Economics &<br />
+            Modern Culture and Media at Brown University.<br />Previously at The
+            Estée Lauder Companies and Intel.
+
+                        My design practice is shaped by a deep appreciation for storytelling across mediums — from bookmaking and zines to film and digital design. I’m drawn to the tactile intimacy of print and the immersive, time-based nature of film, both of which inform how I approach UI/UX: with a focus on pacing, narrative flow, and emotional resonance. Whether I’m crafting a physical publication or a digital interface, I aim to create experiences that are thoughtful, visually compelling, and rooted in purpose. Collaboration and social impact are central to my process — I believe the best design not only looks good, but does good.
+
+          </p> -->
+          <div class="desc-container">
+            <p class="description" id="desc-1">
+              <span>DESIGNING ACROSS MEDIUMS.</span>
+            </p>
+            <p class="description" id="desc-2">
+              <span>STUDYING AT BROWN UNIVERSITY.</span>
+            </p>
+            <p class="description" id="desc-3">
+              <span>PREVIOUSLY AT THE ESTÉE LAUDER COMPANIES AND INTEL.</span>
+            </p>
+          </div>
         </div>
         <div class="image-container">
-            <img src="blue.gif" alt="ascii" class="ascii" style="border-color: white; box-shadow: none; width: 70%; height: 70%;">
+          <!-- <img
+            src="transparent.gif"
+            alt="ascii"
+            class="ascii"
+            style="border: none; box-shadow: none; width: 70%; height: 70%"
+          /> -->
+          <!-- <img src="pin.png" style="border: none; box-shadow: none; width: 15%;">
+          <div class="paper pink">
+          <div class="tape-section"></div>
+          <p></p>
+          <div class="tape-section"></div>
         </div>
+        <div class="paper blue">
+          <div class="top-tape"></div>
+          <p></p>
+        </div> -->
+        </div>
+        
       </section>
 
       <section id="projects">
-        <h2 style="padding-bottom: 1rem; border-bottom: 1px solid rgba(38, 49, 197, 0.2);">Work</h2>
+        <h2
+          style="
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(38, 49, 197, 0.2);
+            font-family: Marke;
+            font-size: 2rem;
+          "
+        >
+          WORK
+        </h2>
         <div class="card-grid">
           <a href="zest.html" class="card">
             <div class="card-img">
-              <img src="assets/card-zest.png" alt="zest prototype">
+              <img src="assets/card-zest.png" alt="zest prototype" />
             </div>
             <div class="card-content">
               <h3>Zest</h3>
@@ -45,7 +95,7 @@
 
           <a href="personas-storyboarding.html" class="card">
             <div class="card-img">
-              <img src="assets/card-microwave.png" alt="microwave">
+              <img src="assets/card-microwave.png" alt="microwave" />
             </div>
             <div class="card-content">
               <h3>Personas & Storyboarding</h3>
@@ -55,7 +105,7 @@
 
           <a href="accessible-components.html" class="card">
             <div class="card-img">
-              <img src="assets/card-dropdown.png" alt="dropdown">
+              <img src="assets/card-dropdown.png" alt="dropdown" />
             </div>
             <div class="card-content">
               <h3>Accessible Components</h3>
@@ -65,7 +115,7 @@
 
           <a href="rokkaku.html" class="card">
             <div class="card-img">
-              <img src="assets/card-rokkaku.png" alt="rokkaku prototype">
+              <img src="assets/card-rokkaku.png" alt="rokkaku prototype" />
             </div>
             <div class="card-content">
               <h3>Rokkaku Kitchen</h3>
@@ -79,5 +129,6 @@
     <footer>
       <p>Last updated on April 30, 2025</p>
     </footer>
+    
   </body>
 </html>
